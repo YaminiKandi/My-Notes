@@ -23,7 +23,7 @@ const Login = () => {
       await logIn(email, password);
       navigate('/home')
     } catch (err) {
-      setError(err.message)
+      setError('Invalid Email or Password')
     }
   }
 
@@ -33,7 +33,7 @@ const Login = () => {
       await googleSignIn();
       navigate('/home')
     } catch (err) {
-      setError(err.message)
+      setError('Cannot connect through Google SignIn')
     }
   }
   const handleDarkMode = () => {

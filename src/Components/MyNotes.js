@@ -27,10 +27,9 @@ const MyNotes = () => {
       setError('Unable to access the user data')
     }
   }
-
   useEffect(() => {
     getUserNotesList();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line
   }, []);
 
   const deleteNote = async(id) => {
@@ -116,14 +115,22 @@ const MyNotes = () => {
         {error && 
           <Alert variant="danger">{error}</Alert>
         }
-        <NotesList 
-          notes={notes.filter((note) => 
-            note.description.toLowerCase().includes(searchText.toLowerCase()) ||
-            note.title.toLowerCase().includes(searchText.toLowerCase())
-          )}
-          handleDeleteNote={deleteNote}
-          handleEditNote={handleEditNote}
-        />
+        {notes.length === 0 ? (
+          <div className="no-notes">
+            <div className="no-notes-img"></div>
+            <p>Notes you add appear here</p>
+          </div>
+          
+        ):(
+          <NotesList 
+            notes={notes.filter((note) => 
+              note.description.toLowerCase().includes(searchText.toLowerCase()) ||
+              note.title.toLowerCase().includes(searchText.toLowerCase())
+            )}
+            handleDeleteNote={deleteNote}
+            handleEditNote={handleEditNote}
+          />
+        )}
       </div>
       {showAddNoteModal && (<AddNoteModal currentEditingNote={currentEditingNote} onCancel={toggleAddNoteModal} onSubmit={handleNewAddNote}/>)}
     </div>

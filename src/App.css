@@ -12,7 +12,23 @@
   align-items: center;
   box-sizing: border-box;
 }
+.no-notes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 50px;
+}
+.no-notes-img {
+  width: 100px;
+  height: 100px;
+  background-image: url(../public/icon1-100.png);
+}
 
+.dark-mode > div > div > p {
+  color: #F6EDFF;
+}
 .section-2 {
   display: flex;
   gap: 16px;

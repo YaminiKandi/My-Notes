@@ -16,6 +16,7 @@ function App() {
         <UserAuthContextProvider>
           <Routes>
             <Route path='/home' element={<ProtectedRoute><MyNotes/></ProtectedRoute>}/>
+            <Route path='/' element={<Login/>}></Route>
             <Route path='/login' element={<Login/>}></Route>
             <Route path='/signup' element={<Signup/>}></Route>
             <Route path='/forgot-password' element={<ForgotPassword/>}></Route>

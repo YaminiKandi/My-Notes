@@ -26,6 +26,7 @@ const AddNoteModal = ({onCancel, onSubmit, currentEditingNote}) => {
     if (currentEditingNote.color){
       setSelectedColor(currentEditingNote.color)
     }
+     // eslint-disable-next-line
   }, [])
 
   const colors = [
