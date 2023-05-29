@@ -120,8 +120,7 @@ const MyNotes = () => {
             <div className="no-notes-img"></div>
             <p>Notes you add appear here</p>
           </div>
-          
-        ):(
+          ):(
           <NotesList 
             notes={notes.filter((note) => 
               note.description.toLowerCase().includes(searchText.toLowerCase()) ||
