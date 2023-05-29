@@ -1,0 +1,53 @@
+.note{
+  width: 100%;
+  min-width: 160px;
+  max-width: 240px;
+  height: 240px;
+  margin: 8px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  white-space: pre-wrap;
+}
+
+.note-title {
+  margin: 0;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.note-description-container {
+  flex: 1 1 0%;
+
+}
+.note-description {
+  text-align: left;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+.note-footer{
+  width: 100%;
+  display: flex;  
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.note-date{
+  font-size: 12px;
+  flex: 1 1 0%;
+  text-align: left;
+}
+.delete-icon, .edit-icon{
+  font-size: 20px;
+  cursor: pointer;
+}

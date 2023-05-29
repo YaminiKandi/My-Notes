@@ -1,0 +1,170 @@
+.addnote-modal-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000AA;
+}
+
+.addnote-modal-container {
+  width: 80%;
+  /* height: 80%; */
+  min-width: 320px;
+  max-width: min(80%, 800px);
+  /* min-height: 320px; */
+  max-height: min(80%, 800px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 8px;
+  padding: 24px;
+  padding-bottom: 80px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.form {
+  width: 100%;
+  height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+  gap: 8px;
+}
+
+.addnote-modal-title, .addnote-modal-description {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: medium;
+}
+
+.addnote-modal-description{
+  height: 100%;
+  resize: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.addnote-modal-desc-wrapper {
+  width: 100%;
+  flex: 1 1 0%;
+  /* overflow: hidden; */
+  margin-bottom: 40px;
+  padding: 2px;
+  position: relative;
+}
+.addnote-modal-desc-wrapper::-webkit-scrollbar{
+  display: none;
+}
+
+.addnote-modal-title:focus,
+.addnote-modal-title:active,
+.addnote-modal-description:focus,
+.addnote-modal-description:active {
+  border: none;
+  outline: none;
+}
+
+.addnote-modal-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 24px;
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #FFFBFE;
+  overflow: visible;
+}
+
+.addnote-modal-footer-darkmode {
+  background-color: #958DA5;
+}
+
+.selected-color-button {
+  cursor: pointer;
+}
+
+.modal-colors-list-item {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+}
+
+.modal-colors-list-item:hover, .selected-color {
+ border: 1px solid black;
+}
+
+.addnote-modal-colors {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  width: 156px;
+  height: 128px;
+  padding: 24px;
+  background-color: #F5EFF7;
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 0%;
+  gap: 4px;
+}
+
+.addnote-modal-btns {
+  display: flex;
+  gap: 2px;
+	color: black;
+}
+
+.addnote-modal-cancelbtn, .addnote-modal-addnotebtn {
+  color: black;
+	width: 100px;
+	height: 32px;
+	border: none;
+	border-radius: 5px;
+	font-size: medium;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.addnote-modal-addnotebtn{
+	background: #D0BCFF;
+}
+
+.addnote-modal-addnotebtn:hover{
+  background-color: #B69DF8;
+}
+
+.addnote-modal-cancelbtn{
+  background-color: #F5EFF7;
+}
+
+.addnote-modal-cancelbtn:hover{
+	background-color: #E6E0E9;
+}
+
+.addnote-modal-error{
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+	width: fit-content;
+  height: fit-content;
+	font-weight: 400;
+	font-size: small;
+	white-space: nowrap;
+	color: red;
+  text-align: left;
+}

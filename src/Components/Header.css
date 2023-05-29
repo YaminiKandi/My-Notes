@@ -1,0 +1,27 @@
+.header{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle{
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 100%;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.toggle-darkmode {
+  background-color: #7A7289;
+  border-color: #4A4458;
+}
+
+.sun-icon-darkmode {
+  color: #FFFBFE;
+}
